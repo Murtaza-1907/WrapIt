@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WRAPIT — You Make It. We Sell It.</title>
+<meta name="description" content="WRAPIT is a B2B outsourced sales and customer-acquisition partner helping businesses generate leads, reach customers and facilitate sales.">
+<meta name="theme-color" content="#080b12">
+<meta property="og:title" content="WRAPIT — You Make It. We Sell It.">
+<meta property="og:description" content="Your products. Our sales network. Start with a measurable 30-day sales pilot.">
+<style>
+:root{
+  --bg:#080b12;--bg2:#0d111a;--card:#111722;--text:#f7f9fc;--muted:#9aa5b5;
+  --line:rgba(255,255,255,.10);--blue:#baff3f;--blue2:#c5ff4d;--white:#fff;
+  --max:1180px;--radius:22px;--shadow:0 20px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(8,11,18,.76);backdrop-filter:blur(16px);border-bottom:1px solid transparent;transition:.25s}
+nav.scrolled{border-color:var(--line)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;height:44px}.brand-logo{display:block;width:108px;height:44px;object-fit:contain;object-position:center;border-radius:0}
+.navlinks{display:flex;gap:25px;color:#c7ceda;font-size:14px}.navlinks a:hover{color:white}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 18px;font-weight:750;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 8px 28px rgba(186,255,63,.25)}.btn-primary:hover{transform:translateY(-2px);background:#8fcf18}
+.btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:white}.btn-ghost:hover{background:rgba(255,255,255,.07)}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{padding:165px 0 100px;position:relative;overflow:hidden;background:radial-gradient(circle at 70% 20%,rgba(186,255,63,.17),transparent 35%),radial-gradient(circle at 15% 20%,rgba(186,255,63,.08),transparent 28%)}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:70px;align-items:center}
+.eyebrow{display:inline-flex;padding:7px 11px;border:1px solid var(--line);border-radius:99px;color:#b8c2d1;background:rgba(255,255,255,.025);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-4px;margin:22px 0}.hero h1 span{color:var(--blue2)}
+.lead{font-size:19px;color:#aeb8c8;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0}.trust{font-size:12px;color:#778396;letter-spacing:.04em}
+.network{position:relative;min-height:470px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015));box-shadow:var(--shadow);overflow:hidden}
+.network:before,.network:after{content:"";position:absolute;border:1px solid rgba(197,255,77,.16);border-radius:50%;inset:12%;transform:rotate(-12deg)}.network:after{inset:25%;transform:rotate(20deg)}
+.node{position:absolute;padding:12px 16px;border:1px solid var(--line);border-radius:15px;background:#121925;box-shadow:0 12px 30px rgba(0,0,0,.3);font-weight:750;font-size:12px;z-index:2}
+.node small{display:block;color:#7f8da2;font-weight:500;margin-top:2px}.center{left:50%;top:50%;transform:translate(-50%,-50%);padding:22px 25px;border-color:rgba(197,255,77,.45);background:#101c31;font-size:20px}.n1{top:13%;left:9%}.n2{top:17%;right:8%}.n3{bottom:17%;left:7%}.n4{bottom:13%;right:7%}
+svg.lines{position:absolute;inset:0;width:100%;height:100%;z-index:1}.line{stroke:rgba(197,255,77,.45);stroke-width:1.2;stroke-dasharray:5 7;animation:dash 7s linear infinite}@keyframes dash{to{stroke-dashoffset:-120}}
+section{padding:105px 0}.light{background:#f7f9fc;color:#0a0f18}.light .muted{color:#647084}.section-head{max-width:720px;margin-bottom:45px}.kicker{color:var(--blue2);font-weight:800;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.section-head h2{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-2px;margin:12px 0}.muted{color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:var(--radius);padding:25px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(197,255,77,.35);box-shadow:0 16px 40px rgba(0,0,0,.15)}.light .card{border-color:#e3e8ef;background:white;box-shadow:0 10px 30px rgba(20,30,50,.05)}.icon{width:42px;height:42px;border-radius:12px;background:rgba(186,255,63,.12);display:grid;place-items:center;color:var(--blue2);font-weight:900;margin-bottom:18px}.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}.light .card p{color:#687487}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}.compare{padding:32px;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}.compare h3{margin-top:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step-num{font-size:12px;color:var(--blue2);font-weight:900}.step h3{margin:7px 0}
+.pilot{background:linear-gradient(135deg,#0d1524,#101c31);border:1px solid rgba(197,255,77,.2);border-radius:30px;padding:55px;position:relative;overflow:hidden}.pilot:after{content:"";position:absolute;width:450px;height:450px;border:1px solid rgba(197,255,77,.14);border-radius:50%;right:-180px;top:-230px}
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:35px 0}.time{border-top:2px solid #2b3a50;padding-top:15px}.time strong{display:block;color:white}.time span{font-size:13px;color:var(--muted)}
+.dashboard{background:#0a0f17;border:1px solid var(--line);border-radius:25px;padding:25px;box-shadow:var(--shadow)}.sample{display:inline-block;font-size:11px;border:1px solid #32435b;padding:4px 8px;border-radius:99px;color:#9eb0c9}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.metric{background:#101722;border:1px solid var(--line);border-radius:15px;padding:17px}.metric small{color:#8290a3}.metric strong{display:block;font-size:27px;margin-top:3px}.bars{display:flex;align-items:end;height:180px;gap:10px;padding:15px;border:1px solid var(--line);border-radius:15px}.bar{flex:1;background:linear-gradient(#60a5fa,#8fcf18);border-radius:6px 6px 2px 2px;min-height:18px}
+.model{position:relative}.model .tag{font-size:11px;color:#8fa3bd;border:1px solid var(--line);padding:4px 8px;border-radius:99px}.price{font-size:35px;font-weight:900;margin:16px 0 5px}.price small{font-size:14px;color:var(--muted);font-weight:500}
+.journey{display:flex;align-items:center;gap:0;overflow:auto;padding:20px 0}.j{min-width:145px;text-align:center}.jbox{padding:17px 10px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.03);font-weight:750;font-size:13px}.arrow{color:var(--blue2);font-size:24px;padding:0 7px}
+.industry{display:flex;flex-wrap:wrap;gap:10px}.pill{padding:11px 15px;border:1px solid var(--line);border-radius:99px;color:#c9d2df;background:rgba(255,255,255,.025);font-size:13px}
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:40px}.founders{display:grid;grid-template-columns:1fr 1fr;gap:15px}.person{padding:20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}.avatar{width:45px;height:45px;border-radius:50%;background:#1c2738;display:grid;place-items:center;color:#9fb7d8;font-weight:800;margin-bottom:12px}
+.faq{max-width:850px}.faq-item{border-bottom:1px solid var(--line)}.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:20px 0;background:none;border:0;color:inherit;font:inherit;font-weight:750;text-align:left;cursor:pointer}.faq-a{display:none;color:var(--muted);padding:0 0 20px;font-size:14px}.faq-item.open .faq-a{display:block}
+.cta{background:#f7f9fc;color:#080b12}.cta-box{background:#0b1019;border-radius:30px;padding:65px;text-align:center;border:1px solid #202b3b}.cta-box h2{font-size:clamp(40px,6vw,68px);line-height:1;letter-spacing:-3px;margin:0 0 15px}.cta-box p{color:#9ca8b8}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:12px;color:#8e9aac;font-weight:700}input,select,textarea{font:inherit;color:white;background:#0e141e;border:1px solid var(--line);border-radius:12px;padding:13px;outline:none}input:focus,select:focus,textarea:focus{border-color:#baff3f}textarea{min-height:120px;resize:vertical}.success{display:none;margin-top:15px;padding:12px;border:1px solid rgba(197,255,77,.3);background:rgba(186,255,63,.08);border-radius:12px;color:#a9c7ff}
+footer{padding:45px 0;border-top:1px solid var(--line);color:#8e9aaa}.footer-grid{display:flex;justify-content:space-between;gap:25px}.footer-links{display:flex;gap:18px;font-size:13px}.footer-links a:hover{color:white}.tiny{font-size:12px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){.navlinks,.nav-cta{display:none}.menu{display:block}.navlinks.mobile{display:flex;position:absolute;top:76px;left:0;right:0;background:#0b1018;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.hero-grid,.about,.split{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.grid3,.steps{grid-template-columns:1fr 1fr}.hero{padding-top:135px}.network{min-height:390px}}
+@media(max-width:600px){.hero{min-height:auto}.hero h1{font-size:clamp(52px,15vw,78px)}.hero .lead{font-size:17px}.network{min-height:380px}.brand-logo{width:96px;height:40px}.container{width:min(var(--max),calc(100% - 28px))}.grid4,.grid3,.steps,.timeline,.metrics,.founders{grid-template-columns:1fr}.hero{padding-bottom:70px}.hero h1{letter-spacing:-2.5px}.lead{font-size:16px}.network{min-height:350px}.pilot,.cta-box{padding:32px 22px}.timeline{gap:22px}.timeline .time{border-top:0;border-left:2px solid #2b3a50;padding-left:14px}form{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{flex-direction:column}.footer-links{flex-wrap:wrap}}
+
+/* =========================
+   WRAPIT VISUAL UPGRADE
+   ========================= */
+body{
+  background:#05070a;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+nav{
+  height:auto;
+  background:rgba(5,7,10,.72);
+  box-shadow:0 10px 40px rgba(0,0,0,.12);
+}
+.navin{height:72px}
+.logo{height:46px}
+.brand-logo{
+  width:112px!important;height:46px!important;
+  object-fit:contain!important;
+  filter:drop-shadow(0 0 10px rgba(197,255,77,.10));
+}
+.navlinks a{
+  position:relative;
+  transition:color .2s ease;
+}
+.navlinks a:after{
+  content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;
+  background:#c5ff4d;transition:.25s ease;
+}
+.navlinks a:hover:after{right:0}
+.btn-primary{
+  background:#c5ff4d!important;color:#05070a!important;
+  box-shadow:0 0 0 1px rgba(197,255,77,.1),0 12px 35px rgba(197,255,77,.16)!important;
+}
+.btn-primary:hover{
+  background:#d3ff70!important;
+  box-shadow:0 0 0 1px rgba(197,255,77,.25),0 16px 45px rgba(197,255,77,.22)!important;
+}
+.btn-ghost:hover{border-color:rgba(197,255,77,.35)!important}
+.hero{
+  min-height:760px;
+  padding-top:145px;
+  padding-bottom:120px;
+  background:
+    radial-gradient(circle at 78% 42%,rgba(197,255,77,.10),transparent 24%),
+    radial-gradient(circle at 20% 5%,rgba(197,255,77,.055),transparent 25%),
+    #05070a;
+}
+.hero-grid{gap:85px}
+.hero .eyebrow{
+  border-color:rgba(197,255,77,.22);
+  color:#c5ff4d;
+  background:rgba(197,255,77,.035);
+}
+.hero h1{
+  font-size:clamp(58px,8vw,104px);
+  letter-spacing:-6px;
+  margin:25px 0 24px;
+  max-width:760px;
+}
+.hero h1 span{
+  color:#c5ff4d;
+  text-shadow:0 0 50px rgba(197,255,77,.08);
+}
+.hero .lead{
+  font-size:20px;
+  line-height:1.7;
+  max-width:670px;
+}
+.hero .actions{margin:34px 0 24px}
+.trust{
+  color:#738095;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+.network{
+  min-height:520px;
+  border-radius:34px;
+  border-color:rgba(197,255,77,.12);
+  background:
+    radial-gradient(circle at 50% 50%,rgba(197,255,77,.07),transparent 24%),
+    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012));
+  box-shadow:0 35px 100px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.network:before{
+  inset:8%; border-color:rgba(197,255,77,.08);
+  animation:spinSlow 18s linear infinite;
+}
+.network:after{
+  inset:21%; border-color:rgba(197,255,77,.10);
+  animation:spinSlow 12s linear infinite reverse;
+}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+.node{
+  background:rgba(12,17,23,.92);
+  border-color:rgba(255,255,255,.09);
+  backdrop-filter:blur(10px);
+}
+.node.center{
+  width:120px;height:120px;border-radius:50%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border-color:rgba(197,255,77,.45);
+  background:#10160d;
+  box-shadow:0 0 0 12px rgba(197,255,77,.025),0 0 60px rgba(197,255,77,.12);
+  color:#c5ff4d;
+  animation:pulseNode 2.8s ease-in-out infinite;
+}
+.node.center small{color:#9ca98a}
+@keyframes pulseNode{
+  50%{box-shadow:0 0 0 22px rgba(197,255,77,.015),0 0 75px rgba(197,255,77,.18)}
+}
+.n1,.n2,.n3,.n4{animation:floatNode 4s ease-in-out infinite}
+.n2{animation-delay:.8s}.n3{animation-delay:1.6s}.n4{animation-delay:2.4s}
+@keyframes floatNode{50%{transform:translateY(-7px)}}
+svg.lines .line{
+  stroke:rgba(197,255,77,.5);
+  stroke-width:1.4;
+  filter:drop-shadow(0 0 5px rgba(197,255,77,.2));
+}
+section{position:relative}
+section:not(.hero):before{
+  content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:min(1180px,calc(100% - 40px));height:1px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);
+}
+.light{
+  background:#f5f7f2;
+}
+.light:before{
+  background:linear-gradient(90deg,transparent,rgba(10,15,18,.08),transparent)!important;
+}
+.section-head h2{
+  letter-spacing:-2.7px;
+}
+.kicker{color:#b2ed45}
+.light .kicker{color:#5f8700}
+.card{
+  position:relative;
+  overflow:hidden;
+}
+.card:after{
+  content:"";position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(197,255,77,.3),transparent);
+  opacity:0;transition:.25s;
+}
+.card:hover:after{opacity:1}
+.icon{
+  background:rgba(197,255,77,.08);
+  color:#c5ff4d;
+}
+.light .icon{background:rgba(95,135,0,.08);color:#6d9500}
+.compare{
+  position:relative;
+  overflow:hidden;
+}
+.compare:before{
+  content:"";position:absolute;width:180px;height:180px;border-radius:50%;
+  right:-100px;top:-100px;background:rgba(197,255,77,.035);
+}
+.pilot{
+  border-color:rgba(197,255,77,.18);
+  background:
+    radial-gradient(circle at 85% 20%,rgba(197,255,77,.10),transparent 28%),
+    linear-gradient(135deg,#0a100d,#101711 55%,#0a0d0a);
+  box-shadow:0 30px 90px rgba(0,0,0,.28);
+}
+.pilot:after{border-color:rgba(197,255,77,.11)}
+.time{border-top-color:#33412e}
+.time strong{color:#c5ff4d}
+.dashboard{
+  border-color:rgba(197,255,77,.15);
+  background:
+    linear-gradient(135deg,#080c0a,#0c120e);
+}
+.sample{color:#c5ff4d;border-color:rgba(197,255,77,.2)}
+.metric{
+  background:rgba(255,255,255,.025);
+  border-color:rgba(255,255,255,.08);
+}
+.metric strong{color:#f7f9fc}
+.bars{background:rgba(255,255,255,.012)}
+.bar{
+  background:linear-gradient(180deg,#c5ff4d,#6e9810)!important;
+  box-shadow:0 0 18px rgba(197,255,77,.08);
+}
+.model .tag{color:#70830f;border-color:rgba(95,135,0,.2)}
+.price{color:#10140b}
+.jbox{transition:.25s}
+.jbox:hover{
+  border-color:rgba(197,255,77,.35);
+  background:rgba(197,255,77,.05);
+  transform:translateY(-3px);
+}
+.arrow{color:#c5ff4d}
+.pill{transition:.2s}
+.pill:hover{border-color:rgba(197,255,77,.3);color:#c5ff4d;transform:translateY(-2px)}
+.about .person{
+  transition:.25s;
+}
+.about .person:hover{
+  border-color:rgba(95,135,0,.25);
+  transform:translateY(-4px);
+}
+.avatar{background:#e9f4d5;color:#607d10}
+.cta{
+  background:#f5f7f2;
+}
+.cta-box{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 0,rgba(197,255,77,.10),transparent 38%),
+    #080b0d;
+  border-color:rgba(197,255,77,.13);
+}
+.cta-box:before,.cta-box:after{
+  content:"";position:absolute;border:1px solid rgba(197,255,77,.09);border-radius:50%;
+  pointer-events:none;
+}
+.cta-box:before{width:520px;height:520px;left:50%;top:-390px;transform:translateX(-50%)}
+.cta-box:after{width:760px;height:760px;left:50%;top:-510px;transform:translateX(-50%)}
+.cta-box>*{position:relative;z-index:2}
+form input:focus,form select:focus,form textarea:focus{
+  border-color:#c5ff4d;
+  box-shadow:0 0 0 3px rgba(197,255,77,.07);
+}
+.success{
+  border-color:rgba(197,255,77,.22);
+  background:rgba(197,255,77,.055);
+  color:#c5ff4d;
+}
+footer{background:#05070a}
+.reveal{transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+
+
+/* FINAL BRAND DIRECTION: WRAPIT BLUE */
+:root{
+  --blue:#3b82f6;
+  --blue2:#60a5fa;
+}
+.logo span{color:#60a5fa!important}
+.brand-logo{display:none!important}
+.btn-primary{
+  background:#3b82f6!important;
+  color:#fff!important;
+  box-shadow:0 8px 28px rgba(59,130,246,.25)!important;
+}
+.btn-primary:hover{
+  background:#2563eb!important;
+  box-shadow:0 16px 45px rgba(59,130,246,.22)!important;
+}
+.hero{
+  background:
+    radial-gradient(circle at 78% 42%,rgba(96,165,250,.10),transparent 24%),
+    radial-gradient(circle at 20% 5%,rgba(59,130,246,.055),transparent 25%),
+    #080b12!important;
+}
+.hero .eyebrow{
+  border-color:rgba(96,165,250,.22)!important;
+  color:#60a5fa!important;
+  background:rgba(96,165,250,.035)!important;
+}
+.hero h1 span{
+  color:#60a5fa!important;
+  text-shadow:0 0 50px rgba(96,165,250,.08)!important;
+}
+.hero .trust{color:#778396!important}
+.network{
+  border-color:rgba(96,165,250,.12)!important;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(59,130,246,.07),transparent 24%),
+    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.012))!important;
+}
+.network:before{border-color:rgba(96,165,250,.08)!important}
+.network:after{border-color:rgba(96,165,250,.10)!important}
+.node.center{
+  border-color:rgba(96,165,250,.45)!important;
+  background:#101c31!important;
+  box-shadow:0 0 0 12px rgba(96,165,250,.025),0 0 60px rgba(96,165,250,.12)!important;
+  color:#60a5fa!important;
+}
+.node.center small{color:#9fb1c9!important}
+svg.lines .line{
+  stroke:rgba(96,165,250,.5)!important;
+  filter:drop-shadow(0 0 5px rgba(96,165,250,.2))!important;
+}
+.kicker{color:#60a5fa!important}
+.light .kicker{color:#2563eb!important}
+.icon{background:rgba(59,130,246,.12)!important;color:#60a5fa!important}
+.light .icon{background:rgba(59,130,246,.08)!important;color:#2563eb!important}
+.card:after{background:linear-gradient(90deg,transparent,rgba(96,165,250,.3),transparent)!important}
+.pilot{
+  border-color:rgba(96,165,250,.18)!important;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(96,165,250,.10),transparent 28%),
+    linear-gradient(135deg,#0d1524,#101c31 55%,#0a0f17)!important;
+}
+.pilot:after{border-color:rgba(96,165,250,.11)!important}
+.time strong{color:#60a5fa!important}
+.dashboard{
+  border-color:rgba(96,165,250,.15)!important;
+  background:linear-gradient(135deg,#080c12,#0c121c)!important;
+}
+.sample{color:#60a5fa!important;border-color:rgba(96,165,250,.2)!important}
+.bar{
+  background:linear-gradient(180deg,#60a5fa,#2563eb)!important;
+  box-shadow:0 0 18px rgba(59,130,246,.08)!important;
+}
+.model .tag{color:#6f8fbf!important;border-color:rgba(96,165,250,.2)!important}
+.arrow{color:#60a5fa!important}
+.jbox:hover{
+  border-color:rgba(96,165,250,.35)!important;
+  background:rgba(96,165,250,.05)!important;
+}
+.pill:hover{border-color:rgba(96,165,250,.3)!important;color:#60a5fa!important}
+.cta-box{
+  background:
+    radial-gradient(circle at 50% 0,rgba(96,165,250,.10),transparent 38%),
+    #080b12!important;
+  border-color:rgba(96,165,250,.13)!important;
+}
+.cta-box:before,.cta-box:after{border-color:rgba(96,165,250,.09)!important}
+form input:focus,form select:focus,form textarea:focus{
+  border-color:#3b82f6!important;
+  box-shadow:0 0 0 3px rgba(59,130,246,.07)!important;
+}
+.success{
+  border-color:rgba(96,165,250,.22)!important;
+  background:rgba(59,130,246,.055)!important;
+  color:#a9c7ff!important;
+}
+
+</style>
+</head>
+<body>
+<nav id="nav"><div class="container navin">
+  <a class="logo" href="#home">WRAP<span>IT</span></a>
+  <div class="navlinks" id="links">
+    <a href="#home">Home</a><a href="#how">How It Works</a><a href="#services">Services</a><a href="#business">For Businesses</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </div>
+  <a class="btn btn-primary nav-cta" href="#contact">Partner With Us</a>
+  <button class="menu" id="menu" aria-label="Open menu">☰</button>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+  <div class="reveal">
+    <span class="eyebrow">B2B SALES • OUTSOURCED CUSTOMER ACQUISITION</span>
+    <h1>You Make It.<br><span>We Sell It.</span></h1>
+    <p class="lead">WRAPIT becomes your outsourced online sales partner — helping your business find customers, create opportunities and facilitate sales without the need to build an entire sales team.</p>
+    <div class="actions"><a class="btn btn-primary" href="#pilot">Start Your 30-Day Pilot →</a><a class="btn btn-ghost" href="#how">See How It Works</a></div>
+    <div class="trust">B2B SALES • LEAD GENERATION • CUSTOMER ACQUISITION • SALES FACILITATION</div><p style="margin:14px 0 0;color:#60a5fa;font-weight:800;font-size:13px">We don’t sell to you. We sell for you.</p>
+  </div>
+  <div class="network reveal" aria-label="Sales network visualization">
+    <svg class="lines" viewBox="0 0 600 470" preserveAspectRatio="none">
+      <line class="line" x1="100" y1="100" x2="300" y2="235"/><line class="line" x1="500" y1="105" x2="300" y2="235"/>
+      <line class="line" x1="105" y1="380" x2="300" y2="235"/><line class="line" x1="495" y1="380" x2="300" y2="235"/>
+    </svg>
+    <div class="node n1">CLIENT BUSINESS<small>Product + Pricing</small></div>
+    <div class="node n2">LEADS<small>Target accounts</small></div>
+    <div class="node n3">PROSPECTS<small>Qualified opportunities</small></div>
+    <div class="node n4">CUSTOMERS<small>Orders</small></div>
+    <div class="node center">WRAPIT<small>Sales Layer</small></div>
+    <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,88px);z-index:3;color:#7e8b9c;font-size:10px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">Business → Reach → Opportunity → Order</div>
+  </div>
+</div></section>
+
+<div class="container" style="margin-top:-48px;position:relative;z-index:5">
+  <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:10px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(10,14,18,.78);backdrop-filter:blur(14px)">
+    <div style="padding:15px 18px;border-right:1px solid rgba(255,255,255,.07)"><div style="font-size:10px;color:#738095;letter-spacing:.1em">THE MODEL</div><strong style="font-size:14px">Outsourced Sales</strong></div>
+    <div style="padding:15px 18px;border-right:1px solid rgba(255,255,255,.07)"><div style="font-size:10px;color:#738095;letter-spacing:.1em">THE FOCUS</div><strong style="font-size:14px">Customer Acquisition</strong></div>
+    <div style="padding:15px 18px"><div style="font-size:10px;color:#738095;letter-spacing:.1em">THE ENTRY</div><strong style="font-size:14px;color:#60a5fa">30-Day Pilot</strong></div>
+  </div>
+</div>
+
+<section class="light"><div class="container">
+  <div class="section-head reveal"><span class="kicker">The Problem</span><h2>Great Products Don't Always Reach the Right Customers.</h2><p class="muted">Many businesses already have strong products but struggle to consistently expand their B2B customer base.</p></div>
+  <div class="grid4">
+    <article class="card reveal"><div class="icon">↗</div><h3>Limited Sales Reach</h3><p>Excellent products can still have access to only a limited customer network.</p></article>
+    <article class="card reveal"><div class="icon">₹</div><h3>Expensive Sales Teams</h3><p>Building an internal sales team requires recruitment, salaries, training and management.</p></article>
+    <article class="card reveal"><div class="icon">◎</div><h3>Difficult Acquisition</h3><p>Finding genuine B2B buyers and continuously following up takes time and resources.</p></article>
+    <article class="card reveal"><div class="icon">◌</div><h3>Owners Wear Too Many Hats</h3><p>Business owners often manage production, operations, finance and sales simultaneously.</p></article>
+  </div>
+  <h3 style="margin-top:45px">That's where WRAPIT comes in.</h3>
+</div></section>
+
+<section id="how"><div class="container">
+  <div class="section-head reveal"><span class="kicker">The Solution</span><h2>Your Outsourced Sales Team.</h2><p class="muted">WRAPIT becomes an extension of your business. We handle customer acquisition while you focus on what you do best.</p></div>
+  <div class="split">
+    <div class="compare reveal"><h3>WITHOUT WRAPIT</h3><p class="muted">Business → Hire Salespeople → Train Team → Generate Leads → Follow Up → Manage Sales → Track Performance</p></div>
+    <div class="compare reveal" style="border-color:rgba(197,255,77,.3)"><h3>WITH WRAPIT</h3><p class="muted">Business → Give WRAPIT Product + Pricing → Find Customers → Generate Leads → Follow Up → Facilitate Sales → Monthly Report</p></div>
+  </div>
+  <div style="margin-top:80px" class="section-head reveal"><span class="kicker">How It Works</span><h2>A sales pipeline built around your business.</h2></div>
+  <div class="steps">
+    <div class="card step reveal"><div class="step-num">STEP 01</div><h3>Understand Your Business</h3><p>We understand your products, pricing, target market and ideal customers.</p></div>
+    <div class="card step reveal"><div class="step-num">STEP 02</div><h3>Build Your Sales Strategy</h3><p>We identify potential customer segments and create an outreach strategy.</p></div>
+    <div class="card step reveal"><div class="step-num">STEP 03</div><h3>Generate Leads</h3><p>We identify and approach relevant B2B prospects through multiple channels.</p></div>
+    <div class="card step reveal"><div class="step-num">STEP 04</div><h3>Convert Opportunities</h3><p>We communicate, answer initial queries, follow up and facilitate quotations.</p></div>
+    <div class="card step reveal"><div class="step-num">STEP 05</div><h3>Facilitate Sales</h3><p>Interested customers are connected with the client for order processing and fulfillment.</p></div>
+    <div class="card step reveal"><div class="step-num">STEP 06</div><h3>Measure & Report</h3><p>We provide clear performance reporting across leads, inquiries, orders and sales.</p></div>
+  </div>
+</div></section>
+
+<section id="services" class="light"><div class="container">
+  <div class="section-head reveal"><span class="kicker">Services</span><h2>Everything Your Sales Pipeline Needs.</h2></div>
+  <div class="grid3">
+    <article class="card reveal"><div class="icon">01</div><h3>B2B Lead Generation</h3><p>Find businesses that could become potential customers.</p></article>
+    <article class="card reveal"><div class="icon">02</div><h3>Customer Acquisition</h3><p>Turn prospects into qualified business opportunities.</p></article>
+    <article class="card reveal"><div class="icon">03</div><h3>Sales Outreach</h3><p>Reach relevant B2B prospects through a flexible online sales approach. The exact channels and outreach mix can vary by client and market.</p></article>
+    <article class="card reveal"><div class="icon">04</div><h3>Follow-Up Management</h3><p>Consistent follow-ups to prevent potential leads from being lost.</p></article>
+    <article class="card reveal"><div class="icon">05</div><h3>Sales Facilitation</h3><p>Coordinate the sales process between prospects and the client.</p></article>
+    <article class="card reveal"><div class="icon">06</div><h3>Performance Analytics</h3><p>Track leads, conversions, orders and sales generated.</p></article>
+  </div>
+</div></section>
+
+<section id="pilot"><div class="container"><div class="pilot reveal">
+  <span class="kicker">30-Day Pilot</span><h2 style="font-size:clamp(38px,5vw,60px);letter-spacing:-2px;margin:10px 0">Don't Take Our Word For It.<br>Test Us.</h2>
+  <p class="lead" style="max-width:760px">Start with a one-month sales pilot and evaluate our performance using measurable sales data.</p>
+  <div class="timeline">
+    <div class="time"><strong>DAYS 1–5</strong><span>Business & Product Onboarding</span></div>
+    <div class="time"><strong>DAYS 6–10</strong><span>Market & Customer Research</span></div>
+    <div class="time"><strong>DAYS 11–25</strong><span>Lead Generation & Sales Outreach</span></div>
+    <div class="time"><strong>DAYS 26–30</strong><span>Follow-Ups, Conversion & Reporting</span></div>
+  </div>
+  <h3>You See The Numbers. Then You Decide.</h3><a class="btn btn-primary" href="#contact">Start Your Pilot →</a>
+</div></div></section>
+
+<section><div class="container">
+  <div class="section-head reveal"><span class="kicker">Reporting</span><h2>See What Your Sales Pipeline Is Doing.</h2><p class="muted">A mock dashboard showing the type of information a client could receive. All figures below are sample data, not WRAPIT performance claims.</p></div>
+  <div class="dashboard reveal">
+    <span class="sample">SAMPLE 30-DAY REPORT</span>
+    <div class="metrics">
+      <div class="metric"><small>Leads Generated</small><strong>500</strong></div><div class="metric"><small>Qualified Prospects</small><strong>120</strong></div><div class="metric"><small>Quotations</small><strong>60</strong></div>
+      <div class="metric"><small>Orders</small><strong>25</strong></div><div class="metric"><small>Sales Facilitated</small><strong>₹8.5L</strong></div><div class="metric"><small>New Accounts</small><strong>18</strong></div>
+    </div>
+    <div class="bars" aria-label="Sample weekly outreach chart">
+      <div class="bar" style="height:35%"></div><div class="bar" style="height:52%"></div><div class="bar" style="height:67%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:82%"></div><div class="bar" style="height:95%"></div><div class="bar" style="height:74%"></div>
+    </div>
+    <p class="tiny" style="color:#6f7d91;margin-bottom:0">Illustrative sample data only. Actual results depend on product demand, pricing, market conditions and customer response.</p>
+  </div>
+</div></section>
+
+<section id="business" class="light"><div class="container">
+  <div class="section-head reveal"><span class="kicker">Business Model</span><h2>Choose How You Want To Work With WRAPIT.</h2></div>
+  <div class="grid3">
+    <article class="card model reveal"><span class="tag">MODEL 01</span><h3>Performance Commission</h3><p>WRAPIT works with the client on a performance-based arrangement.</p><div class="price">Custom<small> performance-based</small></div><p>Commission is agreed with each client based on the product, market, sales cycle and scope of work.</p></article>
+    <article class="card model reveal"><span class="tag">MODEL 02</span><h3>Fixed-Term Partnership</h3><p>Retain WRAPIT as an outsourced sales partner for a defined period.</p><div class="price">Custom<small> fixed-term</small></div><p>Engagement length and service fee are tailored to the business size, product category, target market and scope.</p></article>
+    <article class="card model reveal"><span class="tag">MODEL 03</span><h3>Hybrid</h3><p>A combination of a fixed monthly service fee + performance commission.</p><div class="price">Flexible</div><p>Designed to provide a predictable base cost while aligning incentives with sales performance.</p></article>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head reveal"><span class="kicker">Important Distinction</span><h2>We Don't Buy Your Products. We Sell Them For You.</h2></div>
+  <div class="split">
+    <div class="compare reveal"><h3>Traditional Trading</h3><p class="muted">Trader → Buys Product → Owns Inventory → Resells Product → Earns Markup</p></div>
+    <div class="compare reveal" style="border-color:rgba(197,255,77,.3)"><h3>WRAPIT</h3><p class="muted">Client owns product → Shares Product + Pricing → WRAPIT finds customer → Client sells / fulfills order → WRAPIT earns service fee / commission</p></div>
+  </div>
+  <p class="muted" style="margin-top:25px">WRAPIT operates as a sales and customer-acquisition service provider rather than a conventional product trader.</p>
+</div></section>
+
+<section class="light"><div class="container">
+  <div class="section-head reveal"><span class="kicker">Who We Serve</span><h2>Built For Businesses That Want More Customers.</h2><p class="muted">If you have a product and want more B2B customers, let's talk.</p></div>
+  <div class="industry reveal">
+    <span class="pill">Manufacturing</span><span class="pill">Packaging</span><span class="pill">Cosmetics</span><span class="pill">Industrial Products</span><span class="pill">Stationery</span><span class="pill">Promotional Products</span><span class="pill">Textiles</span><span class="pill">Wholesale & Distribution</span><span class="pill">Other B2B Products</span>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head reveal"><span class="kicker">Why WRAPIT</span><h2>A sales layer built for practical growth.</h2></div>
+  <div class="grid3">
+    <article class="card reveal"><h3>Lower Initial Commitment</h3><p>Start with a pilot before committing to a longer engagement.</p></article>
+    <article class="card reveal"><h3>Performance Focused</h3><p>Measure clear sales activity and outcome metrics.</p></article>
+    <article class="card reveal"><h3>Flexible Engagement</h3><p>Choose commission, fixed-term or hybrid arrangements.</p></article>
+    <article class="card reveal"><h3>Scalable</h3><p>Expand customer acquisition without immediately building a large internal sales team.</p></article>
+    <article class="card reveal"><h3>Transparent Reporting</h3><p>Receive clear information about outreach, leads, inquiries and sales facilitated.</p></article>
+  </div>
+</div></section>
+
+<section id="about" class="light"><div class="container">
+  <div class="about">
+    <div class="reveal"><span class="kicker">About WRAPIT</span><h2 style="font-size:clamp(38px,5vw,58px);line-height:1.05;letter-spacing:-2px">We're Building The Sales Layer Businesses Need.</h2>
+      <p class="muted">WRAPIT was created with a simple idea: many businesses already have products, pricing and manufacturing capabilities, but they need a stronger way to reach customers.</p>
+      <p class="muted">Instead of asking every business to build a large sales department, WRAPIT provides an external sales function focused on customer acquisition, outreach and sales facilitation.</p>
+    </div>
+    <div class="founders reveal">
+      <div class="person"><div class="avatar">YN</div><strong>Murtaza Mahableshwarwala</strong><div class="muted">Co-Founder · Sales</div></div>
+      <div class="person"><div class="avatar">MK</div><strong>Moiz Kagalwala</strong><div class="muted">Co-Founder · Business Development</div></div>
+      <p class="tiny muted" style="grid-column:1/-1">Founder photos, LinkedIn profiles, roles and biographies are intentionally left editable. No qualifications or achievements are invented.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head reveal"><span class="kicker">Customer Journey</span><h2>From Product To Order.</h2></div>
+  <div class="journey reveal">
+    <div class="j"><div class="jbox">PRODUCT</div></div><div class="arrow">→</div><div class="j"><div class="jbox">WRAPIT</div></div><div class="arrow">→</div><div class="j"><div class="jbox">MARKET RESEARCH</div></div><div class="arrow">→</div><div class="j"><div class="jbox">LEAD GENERATION</div></div><div class="arrow">→</div><div class="j"><div class="jbox">OUTREACH</div></div><div class="arrow">→</div><div class="j"><div class="jbox">OPPORTUNITY</div></div><div class="arrow">→</div><div class="j"><div class="jbox">CLIENT</div></div><div class="arrow">→</div><div class="j"><div class="jbox">ORDER</div></div>
+  </div>
+</div></section>
+
+<section class="light"><div class="container">
+  <div class="section-head reveal"><span class="kicker">FAQ</span><h2>Questions, answered.</h2></div>
+  <div class="faq">
+    <div class="faq-item"><button class="faq-q">Is WRAPIT a trading company? <span>+</span></button><div class="faq-a">No. WRAPIT provides sales and customer-acquisition services and does not purchase or own client inventory.</div></div>
+    <div class="faq-item"><button class="faq-q">Who can work with WRAPIT? <span>+</span></button><div class="faq-a">Manufacturers, suppliers, wholesalers and other businesses looking to expand their B2B customer base.</div></div>
+    <div class="faq-item"><button class="faq-q">Do you purchase the products? <span>+</span></button><div class="faq-a">No. Products remain with the client. WRAPIT facilitates customer acquisition and sales.</div></div>
+    <div class="faq-item"><button class="faq-q">How does the 30-day pilot work? <span>+</span></button><div class="faq-a">We onboard the business, understand its products, identify potential customers, conduct outreach and provide a performance report at the end of the pilot.</div></div>
+    <div class="faq-item"><button class="faq-q">How do you charge? <span>+</span></button><div class="faq-a">Depending on the engagement, WRAPIT can work through a performance commission, fixed-term contract or hybrid arrangement.</div></div>
+    <div class="faq-item"><button class="faq-q">Does the 30-day pilot guarantee sales? <span>+</span></button><div class="faq-a">No. The pilot is designed to test the sales process and provide measurable performance data. Results depend on product demand, pricing, market conditions and customer response.</div></div>
+  </div>
+</div></section>
+
+<section id="contact" class="cta"><div class="container">
+  <div class="cta-box reveal"><span class="kicker">Let's Talk</span><h2>Ready To Wrap Your Sales?</h2><p>Give us your product. We'll build the customer pipeline.</p><div class="actions" style="justify-content:center"><a class="btn btn-primary" href="#form">Start a 30-Day Pilot</a><a class="btn btn-ghost" href="#form">Talk to WRAPIT</a></div></div>
+  <div style="height:70px"></div>
+  <div class="section-head reveal"><span class="kicker">Business Inquiry</span><h2 style="font-size:42px">Tell us what you want to sell.</h2></div>
+  <form id="form" class="reveal">
+    <div class="field"><label>FULL NAME</label><input name="full_name" required placeholder="Your name"></div>
+    <div class="field"><label>COMPANY NAME</label><input name="company_name" required placeholder="Company"></div>
+    <div class="field"><label>BUSINESS EMAIL</label><input name="email" required type="email" placeholder="you@company.com"></div>
+    <div class="field"><label>PHONE NUMBER</label><input name="phone" placeholder="+91"></div>
+    <div class="field"><label>INDUSTRY</label><input name="industry" placeholder="e.g. Packaging"></div>
+    <div class="field"><label>PRODUCT CATEGORY</label><input name="product_category" placeholder="What do you sell?"></div>
+    <div class="field"><label>CURRENT SALES CHANNEL</label><input name="current_sales_channel" placeholder="Direct / Distributor / Online / Other"></div>
+    <div class="field"><label>TARGET MARKET</label><input name="target_market" placeholder="City / State / India / Export"></div>
+    <div class="field"><label>ESTIMATED MONTHLY SALES</label><input name="estimated_monthly_sales" placeholder="Optional"></div>
+    <div class="field"><label>WHAT ARE YOU LOOKING FOR?</label><select name="requirement"><option>Lead Generation</option><option>Sales Outreach</option><option>Customer Acquisition</option><option>Complete Sales Support</option><option>30-Day Pilot</option><option>Long-Term Partnership</option><option>Other</option></select></div>
+    <div class="field full"><label>MESSAGE</label><textarea name="message" placeholder="Tell us about your product, target customer and sales goals."></textarea></div>
+    <div class="field full"><button class="btn btn-primary" type="submit">Submit Business Inquiry →</button></div>
+  </form>
+  <div class="success" id="success">Thanks — your inquiry has been captured. The form is ready to connect to Google Sheets and WhatsApp.</div>
+  <p class="muted tiny" style="margin-top:18px">Prefer WhatsApp? <a href="https://wa.me/919820786152" target="_blank" rel="noopener" style="color:#baff3f;font-weight:800">Chat With WRAPIT →</a></p>
+</div></section>
+</main>
+
+<footer><div class="container footer-grid">
+  <div><div class="logo">WRAP<span>IT</span></div><div class="tiny">You Make It. We Sell It.</div><div class="tiny" style="margin-top:12px">© 2026 WRAPIT. All rights reserved.</div></div>
+  <div class="footer-links"><a href="#home">Home</a><a href="#how">How It Works</a><a href="#services">Services</a><a href="#business">Business Model</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="tiny"><a href="https://www.instagram.com/info.wrapit/" target="_blank" rel="noopener">Instagram</a> · WhatsApp<br>support.wrapit@gmail.com · +91 98207 86152 · Mumbai</div>
+</div></footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10));
+const menu=document.getElementById('menu'), links=document.getElementById('links');
+menu.addEventListener('click',()=>links.classList.toggle('mobile'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('mobile')));
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>{
+ const item=q.parentElement; item.classList.toggle('open'); q.querySelector('span').textContent=item.classList.contains('open')?'−':'+';
+}));
+document.getElementById('form').addEventListener('submit',e=>{
+ e.preventDefault();
+ const data = Object.fromEntries(new FormData(e.target).entries());
+ // GOOGLE SHEETS INTEGRATION POINT:
+ // Replace GOOGLE_APPS_SCRIPT_URL below with your deployed Google Apps Script Web App URL.
+ const GOOGLE_APPS_SCRIPT_URL = '';
+ if (GOOGLE_APPS_SCRIPT_URL) {
+   fetch(GOOGLE_APPS_SCRIPT_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(data)});
+ }
+ // WHATSAPP INTEGRATION:
+ // The form can also be routed to WhatsApp using the business number above.
+ document.getElementById('success').style.display='block';
+ e.target.reset();
+});
+</script>
+</body>
+</html>
